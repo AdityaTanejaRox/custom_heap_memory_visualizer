@@ -41,8 +41,7 @@ custom_heap_memory_visualizer/
 │   ├── Test03_AfterInit.json
 │   ├── Test03_AfterMalloc.json
 │   └── ...
-├── demo/
-│   └── demo.gif                     # Preview animation
+├── heap_visualizer_demo.gif        # Preview animation 
 └── README.md
 
 ## 🤝 Credits & License
