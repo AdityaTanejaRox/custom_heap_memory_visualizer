@@ -1,4 +1,4 @@
-# Heap Visualizer 🧠
+# Heap Visualizer
 
 A Python-based animation tool that visualizes memory heap activity from custom C++ malloc/free allocators. This is especially useful for debugging fragmentation, coalescing, and allocator behavior.
 
@@ -14,7 +14,7 @@ A Python-based animation tool that visualizes memory heap activity from custom C
 
 ## Features
 
-- 🔴 Visualizes memory blocks as red (used), light green (free), and dark green (coalesced)
+- Visualizes memory blocks as red (used), light green (free), and dark green (coalesced)
 - Displays live heap stats: used/free memory and block counts
 - Hover over blocks to toggle between raw bytes and human-readable formats (e.g., KB, MB)
 - Animates sequences of heap states to show progression
