@@ -10,7 +10,7 @@ A Python-based animation tool that visualizes memory heap activity from custom C
 
 ![Heap Visualizer Demo](./heap_visualizer_demo.gif)
 
-![Heap Visualizer Demo](./demo_next_prev.gif)
+![Heap Visualizer Demo with Next and Prev Pointers](./demo_next_prev.gif)
 
 ---
 
@@ -44,7 +44,7 @@ custom_heap_memory_visualizer/
 │   ├── Test03_AfterInit.json
 │   ├── Test03_AfterMalloc.json
 │   └── ...
-├── heap_visualizer_demo.gif        # Preview animation 
+├── heap_visualizer_demo.gif        # Preview animation
 └── README.md
 ```
 
