@@ -1,0 +1,276 @@
+{
+  "step": 66,
+  "blocks": [
+    {
+      "offset": 32,
+      "size": 256,
+      "free": true
+    },
+    {
+      "offset": 300,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 824,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 1348,
+      "size": 244,
+      "free": true
+    },
+    {
+      "offset": 1604,
+      "size": 4864,
+      "free": false
+    },
+    {
+      "offset": 6480,
+      "size": 768,
+      "free": false
+    },
+    {
+      "offset": 7260,
+      "size": 2304,
+      "free": false
+    },
+    {
+      "offset": 9576,
+      "size": 1536,
+      "free": false
+    },
+    {
+      "offset": 11124,
+      "size": 640,
+      "free": false
+    },
+    {
+      "offset": 11776,
+      "size": 128,
+      "free": false
+    },
+    {
+      "offset": 11916,
+      "size": 1256,
+      "free": true
+    },
+    {
+      "offset": 13184,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 13708,
+      "size": 4864,
+      "free": false
+    },
+    {
+      "offset": 18584,
+      "size": 1280,
+      "free": false
+    },
+    {
+      "offset": 19876,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 20400,
+      "size": 1792,
+      "free": false
+    },
+    {
+      "offset": 22204,
+      "size": 1036,
+      "free": true
+    },
+    {
+      "offset": 23252,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 23776,
+      "size": 4864,
+      "free": false
+    },
+    {
+      "offset": 28652,
+      "size": 768,
+      "free": false
+    },
+    {
+      "offset": 29432,
+      "size": 2048,
+      "free": false
+    },
+    {
+      "offset": 31492,
+      "size": 256,
+      "free": false
+    },
+    {
+      "offset": 31760,
+      "size": 384,
+      "free": true
+    },
+    {
+      "offset": 32156,
+      "size": 128,
+      "free": false
+    },
+    {
+      "offset": 32296,
+      "size": 232,
+      "free": true
+    },
+    {
+      "offset": 32540,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 32936,
+      "size": 128,
+      "free": false
+    },
+    {
+      "offset": 33076,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 33472,
+      "size": 128,
+      "free": false
+    },
+    {
+      "offset": 33612,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 34008,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 34404,
+      "size": 128,
+      "free": false
+    },
+    {
+      "offset": 34544,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 34940,
+      "size": 128,
+      "free": false
+    },
+    {
+      "offset": 35080,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 35476,
+      "size": 128,
+      "free": false
+    },
+    {
+      "offset": 35616,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 36012,
+      "size": 128,
+      "free": false
+    },
+    {
+      "offset": 36152,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 36548,
+      "size": 128,
+      "free": false
+    },
+    {
+      "offset": 36688,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 37084,
+      "size": 1280,
+      "free": false
+    },
+    {
+      "offset": 38376,
+      "size": 2256,
+      "free": false
+    },
+    {
+      "offset": 40644,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 41168,
+      "size": 76,
+      "free": true
+    },
+    {
+      "offset": 41256,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 41780,
+      "size": 4864,
+      "free": false
+    },
+    {
+      "offset": 46656,
+      "size": 2048,
+      "free": false
+    },
+    {
+      "offset": 48716,
+      "size": 768,
+      "free": false
+    },
+    {
+      "offset": 49496,
+      "size": 256,
+      "free": true
+    },
+    {
+      "offset": 49764,
+      "size": 768,
+      "free": false
+    },
+    {
+      "offset": 50544,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 50940,
+      "size": 248,
+      "free": true
+    }
+  ],
+  "stats": {
+    "total_free_mem": 3988,
+    "total_used_mem": 46544,
+    "num_free_blocks": 9,
+    "num_used_blocks": 44
+  }
+}

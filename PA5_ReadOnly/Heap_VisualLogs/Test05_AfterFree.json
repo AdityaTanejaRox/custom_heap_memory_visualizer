@@ -1,0 +1,16 @@
+{
+  "step": 10,
+  "blocks": [
+    {
+      "offset": 32,
+      "size": 51156,
+      "free": true
+    }
+  ],
+  "stats": {
+    "total_free_mem": 51156,
+    "total_used_mem": 0,
+    "num_free_blocks": 1,
+    "num_used_blocks": 0
+  }
+}

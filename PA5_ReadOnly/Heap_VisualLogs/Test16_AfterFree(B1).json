@@ -1,0 +1,111 @@
+{
+  "step": 111,
+  "blocks": [
+    {
+      "offset": 32,
+      "size": 256,
+      "free": false
+    },
+    {
+      "offset": 300,
+      "size": 32,
+      "free": false
+    },
+    {
+      "offset": 344,
+      "size": 32,
+      "free": false
+    },
+    {
+      "offset": 388,
+      "size": 32,
+      "free": false
+    },
+    {
+      "offset": 432,
+      "size": 32,
+      "free": false
+    },
+    {
+      "offset": 476,
+      "size": 512,
+      "free": true
+    },
+    {
+      "offset": 1000,
+      "size": 768,
+      "free": false
+    },
+    {
+      "offset": 1780,
+      "size": 48,
+      "free": false
+    },
+    {
+      "offset": 1840,
+      "size": 48,
+      "free": false
+    },
+    {
+      "offset": 1900,
+      "size": 48,
+      "free": false
+    },
+    {
+      "offset": 1960,
+      "size": 48,
+      "free": false
+    },
+    {
+      "offset": 2020,
+      "size": 48,
+      "free": false
+    },
+    {
+      "offset": 2080,
+      "size": 48,
+      "free": false
+    },
+    {
+      "offset": 2140,
+      "size": 512,
+      "free": true
+    },
+    {
+      "offset": 2664,
+      "size": 64,
+      "free": false
+    },
+    {
+      "offset": 2740,
+      "size": 96,
+      "free": false
+    },
+    {
+      "offset": 2848,
+      "size": 256,
+      "free": false
+    },
+    {
+      "offset": 3116,
+      "size": 1280,
+      "free": false
+    },
+    {
+      "offset": 4408,
+      "size": 256,
+      "free": false
+    },
+    {
+      "offset": 4676,
+      "size": 46512,
+      "free": true
+    }
+  ],
+  "stats": {
+    "total_free_mem": 47536,
+    "total_used_mem": 3392,
+    "num_free_blocks": 3,
+    "num_used_blocks": 17
+  }
+}

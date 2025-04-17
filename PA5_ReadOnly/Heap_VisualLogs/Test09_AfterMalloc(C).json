@@ -1,0 +1,31 @@
+{
+  "step": 35,
+  "blocks": [
+    {
+      "offset": 32,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 556,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 1080,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 1604,
+      "size": 49584,
+      "free": true
+    }
+  ],
+  "stats": {
+    "total_free_mem": 49584,
+    "total_used_mem": 1536,
+    "num_free_blocks": 1,
+    "num_used_blocks": 3
+  }
+}

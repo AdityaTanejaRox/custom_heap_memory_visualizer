@@ -1,0 +1,12 @@
+{
+  "step": 6,
+  "blocks": [
+
+  ],
+  "stats": {
+    "total_free_mem": 0,
+    "total_used_mem": 0,
+    "num_free_blocks": 0,
+    "num_used_blocks": 0
+  }
+}

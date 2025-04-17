@@ -1,0 +1,156 @@
+{
+  "step": 89,
+  "blocks": [
+    {
+      "offset": 32,
+      "size": 256,
+      "free": true
+    },
+    {
+      "offset": 300,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 824,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 1348,
+      "size": 5120,
+      "free": true
+    },
+    {
+      "offset": 6480,
+      "size": 768,
+      "free": false
+    },
+    {
+      "offset": 7260,
+      "size": 13128,
+      "free": true
+    },
+    {
+      "offset": 20400,
+      "size": 1792,
+      "free": false
+    },
+    {
+      "offset": 22204,
+      "size": 1036,
+      "free": true
+    },
+    {
+      "offset": 23252,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 23776,
+      "size": 8752,
+      "free": true
+    },
+    {
+      "offset": 32540,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 32936,
+      "size": 128,
+      "free": false
+    },
+    {
+      "offset": 33076,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 33472,
+      "size": 128,
+      "free": false
+    },
+    {
+      "offset": 33612,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 34008,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 34404,
+      "size": 128,
+      "free": false
+    },
+    {
+      "offset": 34544,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 34940,
+      "size": 128,
+      "free": false
+    },
+    {
+      "offset": 35080,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 35476,
+      "size": 128,
+      "free": false
+    },
+    {
+      "offset": 35616,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 36012,
+      "size": 128,
+      "free": true
+    },
+    {
+      "offset": 36152,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 36548,
+      "size": 128,
+      "free": true
+    },
+    {
+      "offset": 36688,
+      "size": 384,
+      "free": false
+    },
+    {
+      "offset": 37084,
+      "size": 1280,
+      "free": false
+    },
+    {
+      "offset": 38376,
+      "size": 2256,
+      "free": false
+    },
+    {
+      "offset": 40644,
+      "size": 10544,
+      "free": true
+    }
+  ],
+  "stats": {
+    "total_free_mem": 39092,
+    "total_used_mem": 11728,
+    "num_free_blocks": 8,
+    "num_used_blocks": 21
+  }
+}

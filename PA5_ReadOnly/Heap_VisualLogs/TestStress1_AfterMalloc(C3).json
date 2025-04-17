@@ -1,0 +1,136 @@
+{
+  "step": 24,
+  "blocks": [
+    {
+      "offset": 32,
+      "size": 256,
+      "free": false
+    },
+    {
+      "offset": 300,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 824,
+      "size": 768,
+      "free": false
+    },
+    {
+      "offset": 1604,
+      "size": 4864,
+      "free": false
+    },
+    {
+      "offset": 6480,
+      "size": 768,
+      "free": false
+    },
+    {
+      "offset": 7260,
+      "size": 2304,
+      "free": false
+    },
+    {
+      "offset": 9576,
+      "size": 1536,
+      "free": false
+    },
+    {
+      "offset": 11124,
+      "size": 2048,
+      "free": false
+    },
+    {
+      "offset": 13184,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 13708,
+      "size": 4864,
+      "free": false
+    },
+    {
+      "offset": 18584,
+      "size": 1280,
+      "free": false
+    },
+    {
+      "offset": 19876,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 20400,
+      "size": 1792,
+      "free": false
+    },
+    {
+      "offset": 22204,
+      "size": 768,
+      "free": false
+    },
+    {
+      "offset": 22984,
+      "size": 256,
+      "free": false
+    },
+    {
+      "offset": 23252,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 23776,
+      "size": 4864,
+      "free": false
+    },
+    {
+      "offset": 28652,
+      "size": 768,
+      "free": false
+    },
+    {
+      "offset": 29432,
+      "size": 2048,
+      "free": false
+    },
+    {
+      "offset": 31492,
+      "size": 256,
+      "free": false
+    },
+    {
+      "offset": 31760,
+      "size": 768,
+      "free": false
+    },
+    {
+      "offset": 32540,
+      "size": 8704,
+      "free": false
+    },
+    {
+      "offset": 41256,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 41780,
+      "size": 4864,
+      "free": false
+    },
+    {
+      "offset": 46656,
+      "size": 4532,
+      "free": true
+    }
+  ],
+  "stats": {
+    "total_free_mem": 4532,
+    "total_used_mem": 46336,
+    "num_free_blocks": 1,
+    "num_used_blocks": 24
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "step": 74,
+  "blocks": [
+    {
+      "offset": 32,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 556,
+      "size": 512,
+      "free": false
+    },
+    {
+      "offset": 1080,
+      "size": 768,
+      "free": false
+    },
+    {
+      "offset": 1860,
+      "size": 768,
+      "free": false
+    },
+    {
+      "offset": 2640,
+      "size": 768,
+      "free": false
+    },
+    {
+      "offset": 3420,
+      "size": 1024,
+      "free": false
+    },
+    {
+      "offset": 4456,
+      "size": 768,
+      "free": false
+    },
+    {
+      "offset": 5236,
+      "size": 45952,
+      "free": true
+    }
+  ],
+  "stats": {
+    "total_free_mem": 45952,
+    "total_used_mem": 5120,
+    "num_free_blocks": 1,
+    "num_used_blocks": 7
+  }
+}
