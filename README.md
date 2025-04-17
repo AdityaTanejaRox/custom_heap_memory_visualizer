@@ -6,13 +6,13 @@ A Python-based animation tool that visualizes memory heap activity from custom C
 
 ---
 
-## 📸 Demo
+## Demo
 
 ![Heap Visualizer Demo](./heap_visualizer_demo.gif)
 
 ---
 
-## ✨ Features
+## Features
 
 - 🔴 Visualizes memory blocks as red (used), light green (free), and dark green (coalesced)
 - Displays live heap stats: used/free memory and block counts
@@ -23,7 +23,7 @@ A Python-based animation tool that visualizes memory heap activity from custom C
 
 ---
 
-## 🧱 How It Works
+## How It Works
 
 - The C++ allocator calls a `visualize("TestXX_StepY.json")` function.
 - This dumps a JSON log describing the heap state at that point.
@@ -32,8 +32,9 @@ A Python-based animation tool that visualizes memory heap activity from custom C
 
 ---
 
-## 🧪 Sample Directory Structure
+## Directory Structure
 
+```plaintext
 custom_heap_memory_visualizer/
 ├── visualizer_multistage.py         # Main animation engine
 ├── heap_visualizer_launcher.py     # GUI launcher
@@ -43,8 +44,9 @@ custom_heap_memory_visualizer/
 │   └── ...
 ├── heap_visualizer_demo.gif        # Preview animation 
 └── README.md
+```
 
-## 🤝 Credits & License
+## Credits & License
 
 Created by Aditya Taneja  
 Instructor: Prof. Ed Keenan  
