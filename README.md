@@ -2,7 +2,7 @@
 
 A Python-based animation tool that visualizes memory heap activity from custom C++ malloc/free allocators. This is especially useful for debugging fragmentation, coalescing, and allocator behavior.
 
-> ⚠️ Note: This repo does not include the C++ allocator source code due to copyright and academic policy. All visuals are generated from memory snapshots (JSON files).
+> ⚠️ Note: This repo does not include the C++ allocator source code. All visuals are generated from memory snapshots (JSON files).
 
 ---
 
