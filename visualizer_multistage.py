@@ -2,6 +2,7 @@
 import matplotlib.pyplot as plt
 import matplotlib.patches as patches
 import matplotlib.animation as animation
+from matplotlib.widgets import Button
 import os
 import sys
 import re
@@ -111,10 +112,13 @@ def animate_sequence(snapshots, titles):
     hover_artists = []
     hover_labels = []
 
+    state = {'paused': False}
+
     # Update the current animation frame
     def update(frame):
-        ax_main.clear()
-        draw_snapshot(snapshots[frame], titles[frame], ax_main, ax_stats, hover_artists, hover_labels)
+        if not state['paused']:
+            ax_main.clear()
+            draw_snapshot(snapshots[frame], titles[frame], ax_main, ax_stats, hover_artists, hover_labels)
 
     # Toggle label format on mouse hover
     def on_motion(event):
@@ -125,10 +129,19 @@ def animate_sequence(snapshots, titles):
                 text.set_text(human if current == raw else raw)
                 fig.canvas.draw_idle()
 
+    def toggle_pause(event):
+        state['paused'] = not state['paused']
+
     ani = animation.FuncAnimation(
         fig, update, frames=len(snapshots), interval=1500, repeat=True
     )
     fig.canvas.mpl_connect("motion_notify_event", on_motion)
+
+    btn_ax = plt.axes([0.80, 0.05, 0.13, 0.05])
+    btn = Button(btn_ax, 'Pause/Play', color='#444', hovercolor='#666')
+    btn.label.set_fontsize(10)
+    btn.label.set_color('white')
+    btn.on_clicked(toggle_pause)
     plt.show()
 
 # Entry point: loads JSON logs and starts the animation UI
