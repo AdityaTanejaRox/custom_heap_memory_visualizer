@@ -8,7 +8,7 @@ A Python-based animation tool that visualizes memory heap activity from custom C
 
 ## 📸 Demo
 
-![Heap Visualizer Demo](demo/demo.gif)
+![Heap Visualizer Demo](./heap_visualizer_demo.gif)
 
 ---
 
