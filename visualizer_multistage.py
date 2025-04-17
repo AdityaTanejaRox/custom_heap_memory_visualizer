@@ -44,33 +44,40 @@ def draw_snapshot(snapshot, title, ax_main, ax_stats, hover_artists, hover_label
 
     hover_artists.clear()
     hover_labels.clear()
+    ax_main.clear()
 
-    # Iterate over each memory block
+    # Track Y position and offset of each block for pointer drawing
+    offset_to_y = {}
+    offset_to_block = {}
+
     for block in blocks:
         height = block['size']
-        # Ignore zero-size or invalid blocks
         if height <= 0:
             continue
 
-       # Consider a block coalesced if it's free and bigger than a meaningful static size
-        COALESCED_THRESHOLD = 4096  # 4 KB, adjust as needed
+        offset = block['offset']
+        offset_to_y[offset] = current_y
+        offset_to_block[offset] = block
+
+        COALESCED_THRESHOLD = 4096
 
         if block['free'] and block['size'] >= COALESCED_THRESHOLD:
-           color = '#006633'  # dark green
+            color = '#006633'  # dark green
         elif block['free']:
-           color = '#00ff88'  # light green
+            color = '#00ff88'  # light green
         else:
-            color = '#ff4d4d'  # red (used)
+            color = '#ff4d4d'  # red
 
-        # Draw the memory block as a rectangle
         rect = patches.Rectangle(
             (0.1, current_y), 0.8, height,
             linewidth=1.5, edgecolor='white', facecolor=color, alpha=0.9
         )
         ax_main.add_patch(rect)
 
+        offset_to_y[block['offset']] = current_y + height / 2
+        offset_to_block[block['offset']] = block
+
         label_text = f"{block['size']:,} B"
-        # Only label if the block is tall enough
         if height > min_label_height:
             text_obj = ax_main.text(0.5, current_y + height / 2, label_text,
                                     ha='center', va='center', fontsize=11,
@@ -79,6 +86,88 @@ def draw_snapshot(snapshot, title, ax_main, ax_stats, hover_artists, hover_label
             hover_labels.append((f"{block['size']:,} B", format_bytes(block['size'])))
 
         current_y += height
+
+    # Draw arrows for pNext and pPrev
+    #for block in blocks:
+    #    start_offset = block['offset']
+    #    y1 = offset_to_y_map.get(start_offset, None)
+    #    if y1 is None:
+    #        continue
+    #
+    #    for key, target_offset, is_next in [
+    #        ('pNext_offset', block.get('pNext_offset'), True),
+    #        ('pPrev_offset', block.get('pPrev_offset'), False)
+    #    ]:
+    #        if target_offset == 0 or target_offset not in offset_to_y_map:
+    #            continue
+    #        y2 = offset_to_y_map[target_offset]
+    #
+    #        arrow_color = '#00ff88' if block.get('type') == 'free' else '#ff8888'
+    #        linestyle = '-' if is_next else '--'
+    #
+    #        ax_main.annotate(
+    #            '',
+    #            xy=(0.1 if is_next else 0.9, y2),
+    #            xytext=(0.1 if is_next else 0.9, y1),
+    #            arrowprops=dict(
+    #                arrowstyle="->",
+    #                color=arrow_color,
+    #                linestyle=linestyle,
+    #                linewidth=1.5,
+    #                shrinkA=5,
+    #                shrinkB=5
+    #            )
+    #        )
+
+    X_POS = {
+        'pPrev_free': 0.15,
+        'pNext_free': 0.85,
+        'pPrev_used': 0.25,
+        'pNext_used': 0.75
+    }
+
+    for block in blocks:
+        src_offset = block['offset']
+        height = block['size']
+        y_src = offset_to_y.get(src_offset, 0)
+        block_type = 'free' if block.get('free') else 'used'
+    
+        for kind, target_key, color, linestyle in [
+            ("pNext", "pNext_offset", '#00ff88' if block_type == 'free' else '#ff8888', '-'),
+            ("pPrev", "pPrev_offset", '#00ff88' if block_type == 'free' else '#ff8888', '--')
+        ]:
+            dst_offset = block.get(target_key, 0)
+            # Skip null/invalid/self-referential pointers
+            if dst_offset == 0 or dst_offset == src_offset:
+                continue
+    
+            # If the destination isn't a block, skip it
+            if dst_offset not in offset_to_block:
+                continue
+    
+            # Optional: specifically skip offset 0 even if present in map
+            if dst_offset == 0 or offset_to_y.get(dst_offset, 0) < 10:
+                continue
+    
+            y_frac = 0.3 if kind == "pNext" else 0.7
+            x_frac = X_POS[f"{kind}_{block_type}"]
+    
+            y0 = y_src + height * y_frac
+            dst_block = offset_to_block[dst_offset]
+            dst_height = dst_block['size']
+            y1 = offset_to_y[dst_offset] + dst_height * y_frac
+    
+            ax_main.annotate("",
+                xy=(x_frac, y1), xytext=(x_frac, y0),
+                arrowprops=dict(
+                    arrowstyle="->",
+                    color=color,
+                    lw=1.8,
+                    linestyle=linestyle,
+                    alpha=0.7,
+                    shrinkA=4, shrinkB=4
+                )
+            )
 
     ax_main.set_xlim(0, 1)
     ax_main.set_ylim(0, current_y + (total_height * 0.05))
@@ -90,7 +179,6 @@ def draw_snapshot(snapshot, title, ax_main, ax_stats, hover_artists, hover_label
     base_y = 0.5
     line_spacing = 0.07
 
-    # Heap statistics labels on right side
     ax_stats.text(0, base_y + 2*line_spacing, "*** Heap Stats ***", fontsize=15, va='center',
                   family='sans-serif', color='white', fontweight='bold')
     ax_stats.text(0, base_y + line_spacing, f"Used Mem : {format_bytes(stats.get('total_used_mem', 0))}",
